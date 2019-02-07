@@ -3,7 +3,15 @@ const router = express()
 const db = require('./db')
 
 router.get('/tacoFillings', (req, res) => {
-  // db.getTacos() // then, catch
+  db.getTacos()
+    .then(tacos => {
+      res.json(tacos)
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+
+  // then, catch
 })
 
 router.get('/starSigns', (req, res) => {
