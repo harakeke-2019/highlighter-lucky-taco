@@ -1,5 +1,4 @@
-
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
   return knex('star-signs').del()
     .then(function () {
@@ -16,7 +15,7 @@ exports.seed = function(knex, Promise) {
         {id: 9, name: 'sagittarius', date: 'November 22 - December 21'},
         {id: 10, name: 'capricorn', date: 'December 22 - January 19'},
         {id: 11, name: 'aquarius', date: 'January 20 - February 18'},
-        {id: 12, name: 'pisces', date: 'February 19 - March 20'},
-      ]);
-    });
-};
+        {id: 12, name: 'pisces', date: 'February 19 - March 20'}
+      ])
+    })
+}
