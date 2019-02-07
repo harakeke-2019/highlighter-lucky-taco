@@ -1,10 +1,17 @@
 import React from 'react'
+import {Hashroute as Router, Route} from 'react-router-dom'
+import Home from './Home'
+import Nav from './Nav'
+import Starsign from './Starsign'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <Router>
+      <Nav />
+      <Route exact path="/" component={Home}/>
+      <Route path="/:starsign" component={Starsign}/>
+    </Router>
   )
 }
 
 export default App
-
