@@ -6,7 +6,8 @@ const config = require('../knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getTacos
+  getTacos,
+  getStarSigns
 }
 
 function getTacos (db = connection) {
@@ -22,4 +23,9 @@ function getFourRandomNumbers () {
     if (!arr.find(elem => elem === ran)) arr.push(ran)
   }
   return arr
+}
+
+function getStarSigns (db = connection) {
+  return db('star-signs')
+    .select()
 }

@@ -15,8 +15,14 @@ router.get('/tacoFillings', (req, res) => {
 })
 
 router.get('/starSigns', (req, res) => {
-  // db.getStarSigns() // then, catch
+  db.getStarSigns() // then, catch
   res.send('starSign route')
+    .then(signs => {
+      res.json(signs)
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
 })
 
 module.exports = router
