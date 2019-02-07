@@ -31,8 +31,7 @@ router.get('/quote', (req, res) => {
   request
     .get(url)
     .then(quote => {
-      console.log('quote.body:', quote.body)
-      res.json(quote.body)
+      res.json(quote)
     })
     .catch(err => {
       res.status(500).send('Consuming quote api failed')
