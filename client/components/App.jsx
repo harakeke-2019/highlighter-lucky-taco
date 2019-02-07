@@ -10,7 +10,7 @@ const App = () => {
       <div>
         {/* <Nav /> */}
         <Route exact path="/" component={Home}/>
-        <Route path="/:starsign" component={Starsign}/>
+        <Route path="/:starSign" component={Starsign}/>
       </div>
     </Router>
   )
