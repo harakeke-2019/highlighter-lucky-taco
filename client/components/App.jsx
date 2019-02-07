@@ -2,7 +2,7 @@ import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import Home from './Home'
 // import Nav from './Nav'
-// import Starsign from './Starsign'
+import Starsign from './StarSign'
 
 const App = () => {
   return (
@@ -10,11 +10,9 @@ const App = () => {
       <div>
         {/* <Nav /> */}
         <Route exact path="/" component={Home}/>
-        {/* <Route path="/:starsign" component={Starsign}/> */}
+        <Route path="/:starsign" component={Starsign}/>
       </div>
     </Router>
-    // <Home />
-
   )
 }
 
