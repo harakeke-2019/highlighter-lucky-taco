@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express()
+const request = require('superagent')
 const db = require('./db')
 
 router.get('/tacoFillings', (req, res) => {
@@ -22,6 +23,19 @@ router.get('/starSigns', (req, res) => {
     })
     .catch(err => {
       res.status(500).send(err.message)
+    })
+})
+
+router.get('/quote', (req, res) => {
+  const url = 'https://corporatebs-generator.sameerkumar.website/'
+  request
+    .get(url)
+    .then(quote => {
+      res.json(quote)
+    })
+    .catch(err => {
+      res.status(500).send('Consuming quote api failed')
+      console.error(err)
     })
 })
 
