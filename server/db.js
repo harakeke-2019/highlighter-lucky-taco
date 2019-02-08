@@ -19,7 +19,7 @@ function getTacos (db = connection) {
 function getFourRandomNumbers () {
   let arr = []
   while (arr.length < 4) {
-    const ran = Math.floor(Math.random() * 8 + 1)
+    const ran = Math.floor(Math.random() * 9 + 1)
     if (!arr.find(elem => elem === ran)) arr.push(ran)
   }
   return arr
