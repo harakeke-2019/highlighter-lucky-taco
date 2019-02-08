@@ -23,7 +23,7 @@ export default class Home extends React.Component {
   render () {
     return (
       <div>
-        <h3>Your lucky quote for today: "{this.state.phrase}"</h3>
+        <h3>Today you should: "{this.state.phrase}"</h3>
       </div>
     )
   }

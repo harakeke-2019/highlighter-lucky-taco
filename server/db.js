@@ -12,7 +12,6 @@ module.exports = {
 
 function getTacos (db = connection) {
   const arr = getFourRandomNumbers()
-  console.log(arr)
   return db('taco-fillings').where('id', arr[0]).orWhere('id', arr[1]).orWhere('id', arr[2]).orWhere('id', arr[3])
 }
 

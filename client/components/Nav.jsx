@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className='nav'>
       <div><Link to ='/'>Back to home</Link></div>
-      {/* <div><Link to ='/puppy'>Show me a puppy!</Link></div> */}
+      <div><Link to ='/puppy'>Show me a puppy!</Link></div>
     </div>
   )
 }

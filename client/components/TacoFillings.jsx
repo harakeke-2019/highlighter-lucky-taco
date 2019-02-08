@@ -13,7 +13,6 @@ export default class Tacofillings extends React.Component {
   componentDidMount () {
     getTacoFillings()
       .then(fillings => {
-        console.log(fillings)
         this.setState({ fillings: fillings })
       })
       .catch(err => {
@@ -34,11 +33,6 @@ export default class Tacofillings extends React.Component {
           )
         })}
       </React.Fragment>
-    // {/* <p>1:{this.state.fillings[0][name]}</p>
-    // <p>2:{this.state.fillings[1].name}</p>
-    // <p>3:{this.state.fillings[2].name}</p>
-    // <h1>Taco fillings:{this.state.fillings[3].name}</h1> */}
-
     )
   }
 }

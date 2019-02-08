@@ -13,7 +13,6 @@ export default class Home extends React.Component {
   componentDidMount () {
     getStarSigns()
       .then(starSigns => {
-        console.log(starSigns)
         this.setState({ starSigns: starSigns })
       })
       .catch(err => {
@@ -25,7 +24,7 @@ export default class Home extends React.Component {
     return (
       <div>
         {this.state.starSigns.length > 0 && this.state.starSigns.map(sign => {
-          return <div className='button' key={sign.name}><Link to ={`/${sign.name}`}><h1>{sign.name}</h1><br/>{sign.date}</Link></div>
+          return <div className='button' key={sign.name}><Link to ={`/star-sign/${sign.name}`}><h1>{sign.name}</h1><br/>{sign.date}</Link></div>
         })
         }
       </div>
