@@ -17,7 +17,6 @@ router.get('/tacoFillings', (req, res) => {
 
 router.get('/starSigns', (req, res) => {
   db.getStarSigns() // then, catch
-  res.send('starSign route')
     .then(signs => {
       res.json(signs)
     })
