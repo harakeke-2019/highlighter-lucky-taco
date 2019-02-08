@@ -16,7 +16,7 @@ export default class StarSign extends React.Component {
       <div>
         <h1>{this.state.sign}</h1>
         <TacoFillings />
-        <Quote />
+        {/* <Quote /> */}
       </div>
     )
   }
