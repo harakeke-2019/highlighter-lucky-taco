@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { getQuote } from '../quoteApi'
+import {Link} from 'react-router-dom'
+import {getQuote} from '../quoteApi'
 
 export default class Home extends React.Component {
   constructor (props) {
@@ -13,7 +13,7 @@ export default class Home extends React.Component {
   componentDidMount () {
     getQuote()
       .then(quote => {
-        this.setState({ phrase: quote.phrase })
+        this.setState({phrase: quote.phrase})
       })
       .catch(err => {
         console.error('Error:', err)
@@ -22,8 +22,8 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <div>
-        <h3>Today you should: "{this.state.phrase}"</h3>
+      <div className="quote">
+        <h3>Today you should: <span className="bsquote">"{this.state.phrase}"</span></h3>
       </div>
     )
   }

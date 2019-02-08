@@ -8,7 +8,7 @@ import Puppy from './Puppy'
 const App = () => {
   return (
     <Router>
-      <div>
+      <div className='wrapper'>
         <Nav />
         <Route exact path="/" component={Home}/>
         <Route path="/star-sign/:starSign" component={Starsign}/>
