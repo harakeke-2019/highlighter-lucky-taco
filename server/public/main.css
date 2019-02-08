@@ -5,10 +5,12 @@
 
 body{
   font-family: 'Short Stack', cursive;
+  text-transform: capitalize;
 }
 
 a{
   text-decoration: none;
+  color: black;
 }
 
 .app{
@@ -69,8 +71,10 @@ margin: 10px;
 }
 
 .button{
+  position: relative;
   display: inline-block;
   border: solid 1px black;
+  left: 20px;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 50px;
