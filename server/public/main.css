@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  /* border:1px solid black; */
+}
+
+body{
+  font-family: 'Short Stack', cursive;
+}
+
+a{
+  text-decoration: none;
+}
+
+.app{
+  height: 100vh;
+  width: 100vw;
+}
+
+.taco{
+  margin-top:10vh;
+  font-size: 16px;
+}
+
+.filling{
+  font-size: 24px;
+}
+
+.quote{
+  font-size: 24px;
+  position: relative;
+  margin: 20px 0px;
+  left: 20px;
+}
+
+.bsquote{
+  color: hotpink;
+}
+
+.tacoFillings{
+display: inline-block;
+width: 20vw;
+margin: 25px;
+}
+
+.tacoFillings>img{
+  width:20vw;
+  height: 20vw;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.nav{
+position: relative;
+text-align: center;
+margin-bottom: 20px;
+width: 100vw;
+height: 20px;
+background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+padding: 20px;
+}
+
+.navButtons{
+display: inline;
+margin: 10px;
+}
+
+.buttons{
+
+}
+
+.button{
+  display: inline-block;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+
+.button:hover{
+  background: pink;
+}
+

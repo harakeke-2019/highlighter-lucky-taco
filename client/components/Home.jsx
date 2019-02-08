@@ -22,7 +22,7 @@ export default class Home extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='buttons'>
         {this.state.starSigns.length > 0 && this.state.starSigns.map(sign => {
           return <div className='button' key={sign.name}><Link to ={`/star-sign/${sign.name}`}><h1>{sign.name}</h1><br/>{sign.date}</Link></div>
         })
