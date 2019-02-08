@@ -12,7 +12,6 @@ module.exports = {
 }
 
 function getTacos (db = connection) {
-  const arr = getFourRandomNumbers()
   return db('taco-fillings').select()
 }
 

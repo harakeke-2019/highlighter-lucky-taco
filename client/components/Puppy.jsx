@@ -22,7 +22,9 @@ export default class Puppy extends React.Component {
   render () {
     return (
       <div className='puppy'>
-        <img className='puppyImage' src={this.state.puppy}></img>
+        <div className='puppyImage'>
+          <img src={this.state.puppy}></img>
+        </div>
       </div>
     )
   }
