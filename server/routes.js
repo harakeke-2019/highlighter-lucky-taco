@@ -6,6 +6,7 @@ const db = require('./db')
 router.get('/tacoFillings', (req, res) => {
   db.getTacos()
     .then(tacos => {
+      tacos = getFourRandomFillings(tacos)
       res.json(tacos)
     })
     .catch(err => {
@@ -47,5 +48,18 @@ router.post('/tacoFillings', (req, res) => {
       res.status(500).send(err.message)
     })
 })
+
+function getFourRandomFillings (sourceArr) {
+  let newArr = []
+  let rans = []
+  while (newArr.length < 4) {
+    const ran = Math.floor(Math.random() * sourceArr.length)
+    if (!rans.find(elem => elem === ran)) {
+      rans.push(ran)
+      newArr.push(sourceArr[ran])
+    }
+  }
+  return newArr
+}
 
 module.exports = router
