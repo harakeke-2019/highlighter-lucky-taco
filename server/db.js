@@ -12,17 +12,7 @@ module.exports = {
 }
 
 function getTacos (db = connection) {
-  const arr = getFourRandomNumbers()
-  return db('taco-fillings').where('id', arr[0]).orWhere('id', arr[1]).orWhere('id', arr[2]).orWhere('id', arr[3])
-}
-
-function getFourRandomNumbers () {
-  let arr = []
-  while (arr.length < 4) {
-    const ran = Math.floor(Math.random() * 9 + 1)
-    if (!arr.find(elem => elem === ran)) arr.push(ran)
-  }
-  return arr
+  return db('taco-fillings').select()
 }
 
 function getStarSigns (db = connection) {

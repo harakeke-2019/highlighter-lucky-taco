@@ -21,7 +21,7 @@ export default class AddFilling extends React.Component {
 
     addFilling(e) {
         addTacoFilling(this.state)
-        .end(() => {return <Redirect to='/'/>})
+        .then(() => {return <Redirect to='/'/>})
     }
 
     render() {
