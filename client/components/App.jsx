@@ -4,6 +4,7 @@ import Home from './Home'
 import Nav from './Nav'
 import Starsign from './StarSign'
 import Puppy from './Puppy'
+import AddFilling from './AddFilling'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route exact path="/" component={Home}/>
         <Route path="/star-sign/:starSign" component={Starsign}/>
         <Route exact path="/puppy" component={Puppy}/>
+        <Route exact path="/add-filling" component={AddFilling}/>
       </div>
     </Router>
   )

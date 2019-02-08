@@ -9,3 +9,9 @@ export function getTacoFillings () {
       if (err) throw Error('Cannot get taco fillings')
     })
 }
+
+export function addTacoFilling (filling) {
+  return request
+    .post(`${url}/tacoFillings`)
+    .send(filling)
+}

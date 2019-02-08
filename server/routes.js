@@ -38,4 +38,14 @@ router.get('/quote', (req, res) => {
     })
 })
 
+router.post('/tacoFillings', (req, res) => {
+  db.addTacoFilling(req.body)
+    .then(() => {
+      res.json('success')
+    })
+    .catch(err => {
+      res.status(500).send(err.message)
+    })
+})
+
 module.exports = router
