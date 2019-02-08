@@ -22,17 +22,17 @@ export default class Tacofillings extends React.Component {
 
   render () {
     return (
-      <React.Fragment>
-        <h1>Your Taco Fillings are:</h1>
+      <div className="taco">
+        <h1>Your Lucky Taco Fillings are:</h1>
         {this.state.fillings.length > 0 && this.state.fillings.map(filling => {
           return (
-            <div key={filling.id}>
-              <p key={filling.name}>{filling.name}</p>
+            <div className="tacoFillings" key={filling.id}>
               <img src={`/images/${filling.image}`} width="200px" />
+              <p key={filling.name} className="filling">{filling.name}</p>
             </div>
           )
         })}
-      </React.Fragment>
+      </div>
     )
   }
 }
