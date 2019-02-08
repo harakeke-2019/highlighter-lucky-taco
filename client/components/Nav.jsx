@@ -6,6 +6,7 @@ const Nav = () => {
     <div className='nav'>
       <div className='navButtons'><Link to ='/'>Back to home</Link></div>
       <div className='navButtons'><Link to ='/puppy'>Show me a puppy!</Link></div>
+      <div className='navButtons'><Link to ='/add-filling'>Add filling</Link></div>
     </div>
   )
 }

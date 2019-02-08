@@ -7,7 +7,8 @@ const connection = require('knex')(config)
 
 module.exports = {
   getTacos,
-  getStarSigns
+  getStarSigns,
+  addTacoFilling
 }
 
 function getTacos (db = connection) {
@@ -27,4 +28,9 @@ function getFourRandomNumbers () {
 function getStarSigns (db = connection) {
   return db('star-signs')
     .select()
+}
+
+function addTacoFilling (filling, db = connection) {
+  return db('taco-fillings')
+  .insert(filling)
 }
