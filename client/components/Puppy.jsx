@@ -1,11 +1,29 @@
 import React from 'react'
+import {getPuppy} from '../puppyApi'
 
-const Nav = () => {
-  return (
-    <div className='puppy'>
-      <img className='puppyImage' src='http://www.placepuppy.net/400/250'></img>
-    </div>
-  )
+export default class Puppy extends React.Component {
+  constructor () {
+    super()
+    this.state = {
+      puppy: ''
+    }
+  }
+
+  componentDidMount () {
+    getPuppy()
+      .then(res => {
+        this.setState({puppy: res.message})
+      })
+      .catch(err => {
+        console.error('Error:', err)
+      })
+  }
+
+  render () {
+    return (
+      <div className='puppy'>
+        <img className='puppyImage' src={this.state.puppy}></img>
+      </div>
+    )
+  }
 }
-
-export default Nav
