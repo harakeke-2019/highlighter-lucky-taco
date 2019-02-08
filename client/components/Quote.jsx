@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {getQuote} from '../quoteApi'
+import { Link } from 'react-router-dom'
+import { getQuote } from '../quoteApi'
 
 export default class Home extends React.Component {
   constructor (props) {
@@ -13,7 +13,7 @@ export default class Home extends React.Component {
   componentDidMount () {
     getQuote()
       .then(quote => {
-        this.setState({phrase: quote.phrase})
+        this.setState({ phrase: quote.phrase })
       })
       .catch(err => {
         console.error('Error:', err)
